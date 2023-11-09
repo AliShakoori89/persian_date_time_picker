@@ -2,20 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 
-final ThemeData androidTheme = new ThemeData(
+final ThemeData androidTheme = ThemeData(
   fontFamily: 'Dana',
 );
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: androidTheme,
-      home: new MyHomePage(key: super.key, title: 'دیت تایم پیکر فارسی'),
+      home: MyHomePage(key: super.key, title: 'دیت تایم پیکر فارسی'),
     );
   }
 }
@@ -26,7 +26,7 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -42,30 +42,30 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Directionality(
+    return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: new AppBar(
-          title: new Text(
+        appBar: AppBar(
+          title: Text(
             widget.title,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black),
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               colors: [Colors.white, Color(0xffE4F5F9)],
             ),
           ),
           child: SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            physics: BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            physics: const BouncingScrollPhysics(),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
                                           CupertinoButton(
-                                            child: Text(
+                                            child: const Text(
                                               'لغو',
                                               style: TextStyle(
                                                 fontFamily: 'Dana',
@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             },
                                           ),
                                           CupertinoButton(
-                                            child: Text(
+                                            child: const Text(
                                               'تایید',
                                               style: TextStyle(
                                                 fontFamily: 'Dana',
@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ],
                                       ),
                                     ),
-                                    Divider(
+                                    const Divider(
                                       height: 0,
                                       thickness: 1,
                                     ),
@@ -216,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
                                           CupertinoButton(
-                                            child: Text(
+                                            child: const Text(
                                               'لغو',
                                               style: TextStyle(
                                                 fontFamily: 'Dana',
@@ -227,7 +227,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             },
                                           ),
                                           CupertinoButton(
-                                            child: Text(
+                                            child: const Text(
                                               'تایید',
                                               style: TextStyle(
                                                 fontFamily: 'Dana',
@@ -245,7 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ],
                                       ),
                                     ),
-                                    Divider(
+                                    const Divider(
                                       height: 0,
                                       thickness: 1,
                                     ),
@@ -345,13 +345,13 @@ class _MyHomePageState extends State<MyHomePage> {
         bottomNavigationBar: Container(
           height: 70,
           width: double.infinity,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(boxShadow: [
             BoxShadow(
               blurRadius: 3,
               spreadRadius: 0,
-              offset: Offset(0, 4),
-              color: Color(0xff000000).withOpacity(0.3),
+              offset: const Offset(0, 4),
+              color: const Color(0xff000000).withOpacity(0.3),
             ),
           ], color: Colors.white),
           child: Center(
@@ -376,18 +376,18 @@ class _MyHomePageState extends State<MyHomePage> {
     return ScaleGesture(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: Colors.white,
             boxShadow: [
               BoxShadow(
                 blurRadius: 3,
                 spreadRadius: 0,
-                offset: Offset(0, 4),
-                color: Color(0xff000000).withOpacity(0.3),
+                offset: const Offset(0, 4),
+                color: const Color(0xff000000).withOpacity(0.3),
               ),
             ],
-            borderRadius: BorderRadius.all(Radius.circular(10))),
+            borderRadius: const BorderRadius.all(Radius.circular(10))),
         child: Image.asset(
           'assets/images/$image.png',
           fit: BoxFit.fitWidth,
